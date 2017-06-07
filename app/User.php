@@ -52,6 +52,7 @@ class User extends Model implements AuthenticatableContract,
         return $this->belongsToMany(User::class, 'user_follow', 'follow_id', 'user_id')->withTimestamps();
     }
 
+
     public function follow($userId)
     {
         // 既にフォローしているかの確認
